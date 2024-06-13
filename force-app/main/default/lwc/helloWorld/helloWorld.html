@@ -1,0 +1,37 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-12-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <lightning-card>
+    <div class="slds-m-around_small ">Hello World
+        <br>
+        <p>{fullName}</p>
+        <!-- <p>{member[0]}</p>-->     <!-- this not allowed in LWC -->
+         <p>{profile.name}</p>         <!--  this is allowed in the LWC -->
+         <lightning-input  type="text"  label="Enter the Name" onkeyup={getTheName}></lightning-input>
+         <p>My Name is {fullName} and my designation is {title} </p>
+    </div>
+    
+   </lightning-card> 
+   <br>
+   <lightning-card>
+    <div class="slds-m-around_small">
+        <lightning-input type="text" label="Enter The value" onkeyup={trackHandler} ></lightning-input>
+        <p>My Name is {fullName} and i am from  {profile.city}</p>
+    </div>
+   </lightning-card>
+   <br>
+   <lightning-card>
+    <div class="slds-m-around_small">
+        <p>The Name of the Candidate {getNameOfCandidate} </p>
+        <lightning-input type="text" name="tec" label="Enter The value of Num 1" onkeyup={numHandler1}  pattern="[0-9]"  ></lightning-input>
+        <lightning-input type="text" name="tech" label="Enter The value of Num 2" onkeyup={numHandler1}></lightning-input>
+        <lightning-input type="text" name="tec1" label="Enter The value of Num 3" onkeyup={numHandler1}></lightning-input>
+        <p>the multipliaction of Above No {num1} {num2} {multiplicationHandler}</p>
+    </div>
+   </lightning-card>
+</template>

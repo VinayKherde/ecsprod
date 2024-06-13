@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-13-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <div class="slds-m-around_xxx-small">
+            <lightning-button 
+            variant="brand" 
+            label="Submit" 
+            title="Primary action" 
+            onclick={handleClick} 
+            class="slds-m-left_large"></lightning-button>
+            <template if:false={boolean}>
+                <p class="slds-m-left_large">Data is hidden click the Submit button to make data visible </p>
+            </template>
+            <template if:true={boolean}>
+             <p class="slds-m-left_large">lWC Component is Now visible</p>
+            </template>
+            <div class="slds-m-around_small ">
+                <lightning-input type="text"
+                 label="Enter some text" 
+                 onkeyup={handleInput}></lightning-input>
+                </div>
+            <template if:true={handleInputValue}>
+             <P class="slds-m-left_large">you have entered the right statement </P>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
