@@ -14,4 +14,5 @@ export default class HelloConditionalRendering extends LightningElement {
         
      return this.name === "hello";
     }
+    //new comments and true
 }
